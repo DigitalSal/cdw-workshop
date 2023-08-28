@@ -10,8 +10,8 @@ Version : 1.0.0 `27th March 2023` +
 
 == Important URLs
 // 1. https://tinyurl.com/2awfrsxa[PKO_Details] - Participants must fill their details here to get associated credentials and resources for the workshop. +
-// 2. http://3.109.161.118/auth/realms/workshop/protocol/saml/clients/samlclient[Workshop login] - Use this URL to authenticate yourself and enter CDP. +
-1. https://attend.cloudera.com/clouderadataservicesworkshops[AMERICAS Partner Workshops] - A schedule of upcoming Cloudera Hands-On Workshops. +
+// 2. http://3.109.161.118/auth/realms/partner-hols/protocol/saml/clients/cdp-sso[Workshop login] - Use this URL to authenticate yourself and enter CDP. +
+1. https://attend.cloudera.com/clouderadataservicesworkshop[AMERICAS Partner Workshops] - A schedule of upcoming Cloudera Hands-On Workshops. +
 
 2. https://www.youtube.com/watch?v=2pvxWb2vvGo[CDW Workshop (Recording)] - Watch this video for the complete walkthrough of this CDW workshop. +
 
