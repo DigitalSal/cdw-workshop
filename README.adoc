@@ -176,7 +176,7 @@ Click the below for *`Detailed Documentation(s)`*: +
 
 The objective of this step is to create External tables on top of raw CSV files sitting in cloud storage (In this case it has been stored in AWS S3 by the instructor) and then run few queries to access the data via SQL using HUE. +
 
-=== 3.1 Open Hue for CDW Virtual Warehouse - `1-10hive` +
+=== 3.1 Open Hue for CDW Virtual Warehouse - `hive` +
 
 - Click on the image:images/step3/hue.png[] button on the right upper corner of `1-10hive` as shown in the screenshot below. +
 image:images/step3/31-1.png[] +
@@ -206,7 +206,7 @@ SHOW DATABASES;
 
 image:images/step3/31-3.png[] + 
 
-=== 3.2 Run the following DDL in HUE for the CDW Virtual Warehouse - `1-10hive` +
+=== 3.2 Run the following DDL in HUE for the CDW Virtual Warehouse - `hive` +
 This will create External Tables on CSV Data Files that have been uploaded previously by your instructor in AWS S3. This provides a fast way to allow SQL layer on top of data in cloud storage.
 
 - Copy paste the following into HUE. +
@@ -251,9 +251,9 @@ Make sure that 4 tables (`airlines_csv`, `airports_csv`, `flights_csv`, `planes_
 
 image:images/step3/32-2.png[] 
 
-=== 3.3 Run the following DDL in HUE for the CDW Virtual Warehouse - `1-10impala`. +
+=== 3.3 Run the following DDL in HUE for the CDW Virtual Warehouse - `impala`. +
 
-- Go to the page where now you will access HUE of an Impala virtual warehouse. Click on `HUE` for *`1-10impala`* as shown in the screenshot below.
+- Go to the page where now you will access HUE of an Impala virtual warehouse. Click on `HUE` for *`impala`* as shown in the screenshot below.
 image:images/step3/33-1.png[] +
 
 - Make sure that you click to get `Impala` instead of `default` in the HUE browser as shown below and then click refresh button image:images/step3/33-2refresh.png[]. +
@@ -272,7 +272,7 @@ image:images/step3/33-2.png[] +
 Notice that while the query is executing, continue to the next step.  Once the query returns you will see the following in the Results - `the flights_csv table has over 86 million records`.
 image:images/step3/33-3.png[] +
 
-- Go back to the CDP Console and observe the Impala Virtual Warehouse `1-10impala`. +
+- Go back to the CDP Console and observe the Impala Virtual Warehouse `impala`. +
 image:images/step3/33-4.png[] +
 
 Here, you'll notice that the warehouse is now at a state where it is not executing any queries and hence, the node count would be low and as the users will run their queries it will scale up or down depending upon the need of resources or lack of it when queries are not run. +
@@ -620,7 +620,7 @@ image:images/step4/updatedERD.png[] +
 ** *(2.4).* Created the flights table in Iceberg Table Format and partitioned the table by the year column. Inserted data into the table up to year 2006.
     
 As a final step here let's run the same analytic query we ran against the Raw layer now in our Data Lakehouse DW, to see what happens with performance. 
-From the cloudera console click on -  `1-10impala`. +
+From the cloudera console click on -  `impala`. +
 
 image:images/step4/recap-1.png[] + 
 
@@ -678,7 +678,7 @@ The Data Lakehouse DW query performs significantly better than same query runnin
 In this Step we will look at some of the performance optimization and table maintenance tasks that can be performed to ensure the best possible TCO, while ensuring the best performance. +
 
 === 5.1 Iceberg in-place Partition Evolution [Performance Optimization] +
-- Open HUE for the CDW `Hive` Virtual Warehouse - `1-10hive`
+- Open HUE for the CDW `Hive` Virtual Warehouse - `hive`
 image:images/step5/51-1.png[] +
 
 - One of the key features for Iceberg tables is the ability to evolve the partition that is being used *over time*. +
@@ -714,7 +714,7 @@ WHERE year = 2007;
 ----
 image:images/step5/51-4.png[] +
 
-- Open HUE for the CDW `Impala` Virtual Warehouse - `1-10impala`. +
+- Open HUE for the CDW `Impala` Virtual Warehouse - `impala`. +
 image:images/step5/51-5impala.png[] +
 
 - In the Hue editor look make sure `Impala` is selected as the engine else follow the screenshot to change it to impala. +
@@ -860,7 +860,7 @@ image:images/step5/53-4.png[] +
 ----
 
 === 5.6 Materialized Views [Performance Optimization] +
-- This can be used for both Iceberg tables and Hive Tables to improve performance. Go to the Cloudera console and look for `1-10hive`. Click on the `Hue` button on the right upper corner of `1-10hive` as shown in the screenshot below. +
+- This can be used for both Iceberg tables and Hive Tables to improve performance. Go to the Cloudera console and look for `hive`. Click on the `Hue` button on the right upper corner of `hive` as shown in the screenshot below. +
 
 image:images/step5/56-1hive.png[] +
 
